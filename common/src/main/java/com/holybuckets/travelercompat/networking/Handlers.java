@@ -1,4 +1,4 @@
-package com.holybuckets.template.networking;
+package com.holybuckets.travelercompat.networking;
 
 import net.minecraft.world.entity.player.Player;
 

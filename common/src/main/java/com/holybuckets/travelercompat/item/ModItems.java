@@ -1,8 +1,8 @@
-package com.holybuckets.template.item;
+package com.holybuckets.travelercompat.item;
 
 
-import com.holybuckets.template.Constants;
-import com.holybuckets.template.block.ModBlocks;
+import com.holybuckets.travelercompat.Constants;
+import com.holybuckets.travelercompat.block.ModBlocks;
 import net.blay09.mods.balm.api.DeferredObject;
 import net.blay09.mods.balm.api.item.BalmItems;
 import net.minecraft.resources.ResourceLocation;

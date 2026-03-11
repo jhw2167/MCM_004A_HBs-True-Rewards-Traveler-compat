@@ -1,13 +1,13 @@
-package com.holybuckets.template;
+package com.holybuckets.travelercompat;
 
-import com.holybuckets.template.client.CommonClassClient;
-import com.holybuckets.template.client.IBewlrRenderer;
+import com.holybuckets.travelercompat.client.CommonClassClient;
+import com.holybuckets.travelercompat.client.IBewlrRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class TemplateMainClient {
+public class TravelerRewardsCompatMainForgeClient {
 
 
     public static void clientInitializeForge() {

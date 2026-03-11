@@ -1,7 +1,7 @@
-package com.holybuckets.template.client;
+package com.holybuckets.travelercompat.client;
 
-import com.holybuckets.template.client.screen.ModScreens;
-import com.holybuckets.template.item.ModItems;
+import com.holybuckets.travelercompat.client.screen.ModScreens;
+import com.holybuckets.travelercompat.item.ModItems;
 import com.holybuckets.foundation.client.ClientBalmEventRegister;
 import com.holybuckets.foundation.client.ClientEventRegistrar;
 import net.blay09.mods.balm.api.client.BalmClient;

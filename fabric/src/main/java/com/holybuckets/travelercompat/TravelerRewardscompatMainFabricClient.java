@@ -1,10 +1,10 @@
-package com.holybuckets.template;
+package com.holybuckets.travelercompat;
 
 import net.blay09.mods.balm.api.client.BalmClient;
 import net.fabricmc.api.ClientModInitializer;
 
 
-public class TemplateMainClient implements ClientModInitializer {
+public class TravelerRewardsCompatMainFabricClient implements ClientModInitializer {
     
     @Override
     public void onInitializeClient() {

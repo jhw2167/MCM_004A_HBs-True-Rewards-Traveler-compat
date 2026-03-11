@@ -1,4 +1,4 @@
-package com.holybuckets.template.client;
+package com.holybuckets.travelercompat.client;
 
 import net.blay09.mods.balm.api.client.rendering.BalmRenderers;
 

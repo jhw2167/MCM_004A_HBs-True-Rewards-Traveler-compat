@@ -1,7 +1,7 @@
-package com.holybuckets.template.client.screen;
+package com.holybuckets.travelercompat.client.screen;
 
-import com.holybuckets.template.Constants;
-import com.holybuckets.template.menu.TemplateChestEntityMenu;
+import com.holybuckets.travelercompat.Constants;
+import com.holybuckets.travelercompat.menu.TemplateChestEntityMenu;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
@@ -9,10 +9,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
-import static com.holybuckets.template.menu.TemplateChestEntityMenu.BUFFER;
+import static com.holybuckets.travelercompat.menu.TemplateChestEntityMenu.BUFFER;
 
 //import BUFFER from ChestCountingMenu
-//import static com.holybuckets.template.menu.ChallengeChestCountingMenu.BUFFER;
+//import static com.holybuckets.travelercompat.menu.ChallengeChestCountingMenu.BUFFER;
 /**
  * Screen for Challenge Counting Chest — displays the chest GUI with a special layout.
  */

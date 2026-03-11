@@ -1,6 +1,6 @@
-package com.holybuckets.template.platform;
+package com.holybuckets.travelercompat.platform;
 
-import com.holybuckets.template.platform.services.IPlatformHelper;
+import com.holybuckets.travelercompat.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatformHelper implements IPlatformHelper {
