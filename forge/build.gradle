@@ -90,6 +90,11 @@ dependencies {
         transitive = false
     }
 
+    implementation fg.deobf("com.holybuckets.traveler:HBs_Traveler_Rewards-forge-${minecraft_version}:${traveler_version}") {
+        changing = true
+        transitive = false
+    }
+
     implementation fg.deobf("curse.maven:create-${create_proj_id}:${create_forge_file_id}")
 
     implementation fg.deobf("net.blay09.mods:waystones-forge:${waystones_version}") {

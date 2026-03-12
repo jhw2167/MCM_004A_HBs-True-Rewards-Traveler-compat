@@ -45,6 +45,10 @@ dependencies {
         changing = true
     }
 
+    implementation ("com.holybuckets.traveler:HBs_Traveler_Rewards-common-${minecraft_version}:${traveler_version}") {
+        changing = true
+    }
+
     implementation ("net.blay09.mods:waystones-common:${waystones_version}") {
         changing = true
         transitive = false

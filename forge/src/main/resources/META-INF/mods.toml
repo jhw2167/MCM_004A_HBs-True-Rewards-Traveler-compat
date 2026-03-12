@@ -37,6 +37,12 @@ versionRange="[${foundation_version},)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.${mod_id}]]
+modId="hbs_traveler_rewards"
+mandatory=true
+versionRange="[${traveler_version},)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.${mod_id}]]
 modId="waystones"
 mandatory=false
 versionRange="${waystones_version_range}"
