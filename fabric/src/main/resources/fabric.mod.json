@@ -33,10 +33,10 @@
         "java": ">=17",
         "balm-fabric": ">=${balm_version}",
         "hbs_foundation": ">=${foundation_version}",
-        "create": ">=${create_version}"
+        "create": ">=${create_version}",
+        "waystones": ">=${waystones_version_range}"
     },
     "suggests": {
         "another-mod": "*"
     }
 }
-  
