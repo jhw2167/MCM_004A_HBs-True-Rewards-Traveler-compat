@@ -37,8 +37,8 @@ versionRange="[${foundation_version},)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.${mod_id}]]
-modId="create"
+modId="waystones"
 mandatory=false
-versionRange="[${create_version},)"
+versionRange="${waystones_version_range}"
 ordering="NONE"
 side="BOTH"
