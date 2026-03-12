@@ -44,6 +44,11 @@ dependencies {
     implementation ("com.holybuckets.foundation:HBs_Foundation-common-${minecraft_version}:${foundation_version}") {
         changing = true
     }
+
+    implementation ("net.blay09.mods:waystones-common:${waystones_version}") {
+        changing = true
+        transitive = false
+    }
 }
 
 publishing {

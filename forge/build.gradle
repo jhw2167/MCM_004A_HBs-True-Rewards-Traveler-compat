@@ -92,6 +92,11 @@ dependencies {
 
     implementation fg.deobf("curse.maven:create-${create_proj_id}:${create_forge_file_id}")
 
+    implementation fg.deobf("net.blay09.mods:waystones-forge:${waystones_version}") {
+        changing = true
+        transitive = false
+    }
+
 }
 
 tasks.withType(JavaCompile).configureEach {

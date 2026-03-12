@@ -152,7 +152,9 @@ subprojects {
                 "balm_version": project.balm_version,
                 "balm_version_range": project.balm_version_range,
                 "foundation_version": project.foundation_version,
-                "create_version": project.create_version
+                "create_version": project.create_version,
+                "waystones_version": project.waystones_version,
+                "waystones_version_range": project.waystones_version_range
         ]
 
         filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {
