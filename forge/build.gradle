@@ -99,6 +99,8 @@ dependencies {
 
     implementation fg.deobf("curse.maven:tough-as-nails-${tough_as_nails_proj_id}:${tough_as_nails_forge_file_id}")
 
+    compileOnly fg.deobf("curse.maven:glitchcore-955399:5787839")
+
     implementation fg.deobf("net.blay09.mods:waystones-forge:${waystones_version}") {
         changing = true
         transitive = false
