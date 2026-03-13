@@ -48,3 +48,9 @@ mandatory=false
 versionRange="${waystones_version_range}"
 ordering="NONE"
 side="BOTH"
+[[dependencies.${mod_id}]]
+modId="toughasnails"
+mandatory=false
+versionRange="${tough_as_nails_version_range}"
+ordering="NONE"
+side="BOTH"

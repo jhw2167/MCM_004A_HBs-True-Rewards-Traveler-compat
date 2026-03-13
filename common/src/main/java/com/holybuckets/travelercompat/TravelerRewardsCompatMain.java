@@ -2,7 +2,7 @@ package com.holybuckets.travelercompat;
 
 
 import com.holybuckets.foundation.event.EventRegistrar;
-import com.holybuckets.travelercompat.config.TemplateConfig;
+import com.holybuckets.travelercompat.config.TravelerRewardsCompatConfig;
 import net.blay09.mods.balm.api.Balm;
 import net.blay09.mods.balm.api.event.server.ServerStartingEvent;
 
@@ -12,7 +12,7 @@ import net.blay09.mods.balm.api.event.server.ServerStartingEvent;
  */
 public class TravelerRewardsCompatMain {
     private static boolean DEV_MODE = false;;
-    private static TemplateConfig CONFIG;
+    public static TravelerRewardsCompatConfig CONFIG;
     public static TravelerRewardsCompatMain INSTANCE;
 
     public TravelerRewardsCompatMain()
@@ -33,6 +33,13 @@ public class TravelerRewardsCompatMain {
             .withForge("com.holybuckets.challengetemple.externalapi.ForgePortalApi")
             .build();
             */
+        Balm.modProxy()
+            .with("waystones", "com.holybuckets.travelercompat.waystones.WaystonesSoulboundTeleport")
+            .withFallback(null)
+            .build();
+
+            //Configs
+        Balm.getConfig().registerConfig(TravelerRewardsCompatConfig.class);
 
         //Events
         EventRegistrar registrar = EventRegistrar.getInstance();
@@ -45,7 +52,7 @@ public class TravelerRewardsCompatMain {
     }
 
     private void onServerStarting(ServerStartingEvent e) {
-        CONFIG = Balm.getConfig().getActiveConfig(TemplateConfig.class);
+        CONFIG = Balm.getConfig().getActiveConfig(TravelerRewardsCompatConfig.class);
         //this.DEV_MODE = CONFIG.devMode;
         this.DEV_MODE = false;
     }

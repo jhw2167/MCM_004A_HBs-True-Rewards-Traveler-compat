@@ -31,8 +31,6 @@ public class CommonClass {
             Constants.LOG.info("Hello to " + Constants.MOD_NAME + "!");
         }
 
-        //RegisterConfigs
-        //Balm.getConfig().registerConfig(ChallengeTempleConfig.class);
         TravelerRewardsCompatMain.INSTANCE = new TravelerRewardsCompatMain();
         BalmEventRegister.registerEvents();
         BalmEventRegister.registerCommands();

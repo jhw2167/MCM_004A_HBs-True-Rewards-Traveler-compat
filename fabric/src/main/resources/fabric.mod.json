@@ -36,7 +36,8 @@
         "hbs_traveler_rewards": ">=${traveler_version}"
     },
     "suggests": {
-        "waystones": ">=${waystones_version_range}",
+        "waystones": ">=${waystones_version}",
+        "tough-as-nails": ">=${tough_as_nails_version}",
         "another-mod": "*"
     }
 }
