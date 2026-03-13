@@ -3,6 +3,8 @@ package com.holybuckets.travelercompat;
 
 import com.holybuckets.foundation.event.EventRegistrar;
 import com.holybuckets.travelercompat.config.TravelerRewardsCompatConfig;
+import com.holybuckets.travelercompat.externalapi.TemperatureAPI;
+import com.holybuckets.travelercompat.platform.Services;
 import net.blay09.mods.balm.api.Balm;
 import net.blay09.mods.balm.api.event.server.ServerStartingEvent;
 
@@ -26,13 +28,13 @@ public class TravelerRewardsCompatMain {
     private void init()
     {
 
-        /*
-        Proxy for external APIs which are platform dependent
-        this.portalApi = (PortalApi) Balm.platformProxy()
-            .withFabric("com.holybuckets.challengetemple.externalapi.FabricPortalApi")
-            .withForge("com.holybuckets.challengetemple.externalapi.ForgePortalApi")
-            .build();
-            */
+        if (Services.PLATFORM.isModLoaded("toughasnails")) {
+            Balm.platformProxy()
+                .withForge("com.holybuckets.travelercompat.externalapi.ForgeTemperatureAPI")
+                .withFabric("com.holybuckets.travelercompat.externalapi.FabricTemperatureAPI")
+                .build();
+        }
+
         Balm.modProxy()
             .with("waystones", "com.holybuckets.travelercompat.waystones.WaystonesSoulboundTeleport")
             .withFallback(null)
