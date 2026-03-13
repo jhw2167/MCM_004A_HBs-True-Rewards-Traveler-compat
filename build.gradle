@@ -155,7 +155,9 @@ subprojects {
                 "traveler_version": project.traveler_version,
                 "create_version": project.create_version,
                 "waystones_version": project.waystones_version,
-                "waystones_version_range": project.waystones_version_range
+                "waystones_version_range": project.waystones_version_range,
+                "tough_as_nails_version": project.tough_as_nails_version,
+                "tough_as_nails_version_range": project.tough_as_nails_version_range
         ]
 
         filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {

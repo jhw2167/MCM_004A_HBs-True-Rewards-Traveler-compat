@@ -34,6 +34,8 @@ dependencies {
 
     modImplementation("com.simibubi.create:create-fabric:${create_fabric_version}")
 
+    modImplementation("curse.maven:tough-as-nails-${tough_as_nails_proj_id}:${tough_as_nails_fabric_file_id}")
+
     modImplementation ("net.blay09.mods:waystones-fabric:${waystones_version}") {
         transitive = false
         changing = true
