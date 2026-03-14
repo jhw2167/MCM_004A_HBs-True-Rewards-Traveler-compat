@@ -16,7 +16,6 @@ public class ForgeTemperatureAPI implements TemperatureAPI
         Balm.getEvents().onEvent(ManagedTravelerTickEvent.class, this::onManagedTravelerTick);
     }
 
-    private static final int EFFECT_DURATION_TICKS = 60;
 
     @Override
     public void onManagedTravelerTick(ManagedTravelerTickEvent event) {
@@ -52,7 +51,8 @@ public class ForgeTemperatureAPI implements TemperatureAPI
     private void applyClimateClemency(ServerPlayer player) {
         if (!player.hasEffect(TANEffects.CLIMATE_CLEMENCY)) {
             // ambient=false, visible=false keeps it hidden from HUD
-            player.addEffect(new MobEffectInstance(TANEffects.CLIMATE_CLEMENCY, EFFECT_DURATION_TICKS, 0, false, false));
+            player.addEffect(new MobEffectInstance(TANEffects.CLIMATE_CLEMENCY, EFFECT_DURATION_TICKS,
+             0, false, false, false));
         }
     }
 
