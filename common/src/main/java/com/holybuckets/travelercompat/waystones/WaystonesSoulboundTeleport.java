@@ -1,6 +1,7 @@
 package com.holybuckets.travelercompat.waystones;
 
 import com.holybuckets.foundation.CommonClass;
+import com.holybuckets.foundation.HBUtil;
 import com.holybuckets.traveler.core.ManagedTraveler;
 import com.holybuckets.travelercompat.TravelerRewardsCompatMain;
 import com.holybuckets.travelercompat.externalapi.INonRequiredModCompat;
@@ -11,6 +12,7 @@ import net.blay09.mods.waystones.api.IWaystoneTeleportContext;
 import net.blay09.mods.waystones.api.WaystoneTeleportEvent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
@@ -47,12 +49,16 @@ public class WaystonesSoulboundTeleport implements INonRequiredModCompat {
     {
         if(!TravelerRewardsCompatMain.CONFIG.waystoneCompatConfig.takeItemsOnWaystoneTeleport) return;
         List<Player> playersTeleported = event.getTeleportedEntities().stream()
+            .filter(entity -> !entity.level().isClientSide())
             .filter(entity -> entity instanceof Player)
             .map(entity -> (Player) entity)
             .toList();
-        BlockPos prePos = preTeleportPos.remove(event.getContext());
         if (playersTeleported.isEmpty()) return;
+        BlockPos prePos = preTeleportPos.remove(event.getContext());
         if (prePos == null) return;
+        ServerLevel level = (ServerLevel) HBUtil.LevelUtil.toLevel(HBUtil.LevelUtil.LevelNameSpace.SERVER,
+            event.getContext().getFromWaystone().getDimension() );
+
 
         for (Player player : playersTeleported)
         {
@@ -61,7 +67,7 @@ public class WaystonesSoulboundTeleport implements INonRequiredModCompat {
             if(traveler.hasTravelersBlessing()) continue;
 
             Set<Integer> soulSlots = traveler.getSoulboundSlots();
-            Level level = player.level();
+            Level destLevel = player.level();
 
             Set<ItemStack> droppedItems = new HashSet<>();
             Inventory inv = player.getInventory();

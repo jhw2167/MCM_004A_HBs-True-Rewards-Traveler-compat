@@ -3,12 +3,10 @@ package com.holybuckets.travelercompat;
 import com.holybuckets.foundation.event.BalmEventRegister;
 import com.holybuckets.travelercompat.block.ModBlocks;
 import com.holybuckets.travelercompat.block.be.ModBlockEntities;
-import com.holybuckets.travelercompat.client.ModRenderers;
 import com.holybuckets.travelercompat.item.ModItems;
 import com.holybuckets.travelercompat.menu.ModMenus;
 import com.holybuckets.travelercompat.platform.Services;
 import net.blay09.mods.balm.api.Balm;
-import net.blay09.mods.balm.api.client.BalmClient;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 
@@ -50,7 +48,4 @@ public class CommonClass {
 
     }
 
-    public static void initClient() {
-        ModRenderers.clientInitialize(BalmClient.getRenderers());
-    }
 }
