@@ -41,7 +41,7 @@ public class WaystonesSoulboundTeleport implements INonRequiredModCompat {
     private void waystonePreTeleport(WaystoneTeleportEvent.Pre event) {
         BlockPos chestPost = event.getContext().getEntity().blockPosition();
         IWaystone ws = event.getContext().getFromWaystone();
-        if(ws != null) chestPost = ws.getPos().south().below();
+        if(ws != null) chestPost = ws.getPos().east().below();
         preTeleportPos.put(event.getContext(), chestPost);
     }
 
